@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.hibernate">
+	<class name="Teacher" dynamic-update="true">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="name" length="20"></property>
+		
+		<set name="students" table="t_s">
+			<key column="teacher_id"></key>
+			<many-to-many column="Student_id" class="com.hibernate.Student"></many-to-many>
+		</set>
+    </class>
+	
+</hibernate-mapping>

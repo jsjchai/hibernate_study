@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="model">
+
+	<class name="User" table="_User" >
+		<id name="id" column="_id"></id>
+		<property name="name" length="20" ></property>
+		<property name="password"></property>
+		<property name="age"></property>
+		<property name="birthday" type="date" ></property>
+	</class>
+
+</hibernate-mapping>
